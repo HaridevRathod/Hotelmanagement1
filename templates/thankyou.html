@@ -1,0 +1,26 @@
+{% extends "ubase.html" %} 
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>thankyou</title>
+</head>
+<style type="text/css">
+    body{
+        background-image: url("{% static 'img/bg.jpg' %}");
+        }
+       
+</style>
+<body><br><br>
+    <font color="white">
+    <fieldset style="height: 350px">
+            
+        <center><h1>Thank You For Choosing our Service</h1>
+        <h2>{{user.username}}</h2></center>
+        <!--<img src="{% static 'img/9.jpg' %}">-->
+    </fieldset>
+</font>
+</body>
+</html>
+{% endblock %}

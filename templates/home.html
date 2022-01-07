@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<style type="text/css">
+    body{
+        background-image: url("{% static 'img/bg.jpg' %}");
+        }
+       
+</style>
+<body><br><br>
+	<font color="white">
+	<fieldset style="height: 300px">
+	<center>{% include '_alerts.html' %}</center>
+            <br><br><br>
+		<center><h1>Welcome</h1>
+		<h2>{{user.username}}</h2></center>
+		<!--<img src="{% static 'img/9.jpg' %}">-->
+	</fieldset>
+</font>
+</body>
+</html>
+{% endblock %}

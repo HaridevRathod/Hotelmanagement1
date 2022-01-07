@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>	
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+    <style>
+
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        body{ font: 14px sans-serif;}
+        .wrapper{ width: 360px; padding: 20px; }
+
+        
+        table {
+  			border-collapse: collapse;
+  			width: 100%;
+  			border: 1px solid #ddd;
+			}
+
+   			td{background-color:grey;}
+  			th {background-color: lightgrey;}
+  
+    </style>
+<body>
+    <font color="white">
+    <header>
+    <table>
+        <tr><td style="text-align: left;"><h1>&nbsp;{% block title %}Hotel Management System</h1> <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admin Side{% endblock %}</h4></td></tr>
+        <tr>
+            <th align='left'><br>
+        
+        <div>&nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'home' %}">Home</a>&nbsp; &nbsp; &nbsp; &nbsp;
+				<a href="{% url 'form' %}">Customer Form</a>&nbsp; &nbsp; &nbsp; &nbsp;
+				<a href="{% url 'index' %}">View All Customer </a>  &nbsp; &nbsp; &nbsp; &nbsp;
+				<a href="{% url 'update_delete' %}">Update/Delete Details</a>
+
+					&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+   					&nbsp;&nbsp; &nbsp; 
+					<a href="">{{user.username}}</a>&nbsp; &nbsp; &nbsp; &nbsp;
+   						 
+					<a href="{% url 'logout' %}">Logout</a></div><br>
+				</th>
+			</tr>
+		</table>    
+	</font>
+</header>
+{% block content %}
+
+
+{% endblock %}
+<footer>
+<div class="copyright"><font color="white">
+					<center><p>
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> Hotel Management System | All rights reserved | <a href="" target="_blank"></a>
+						</p></center></font>
+			
+		</div>
+	</footer>
+

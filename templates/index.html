@@ -1,0 +1,65 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style type="text/css">
+    body{
+        background-image: url("{% static 'img/bg.jpg' %}");
+        }
+    /*
+    table{
+        border-collapse: collapse;
+        width: 150%;
+        text-align: center;
+    }*/
+
+  </style>
+<body bgcolor="black">
+  <font color="white">
+                <center><h1>View Customer Details</h1></center></font></center>
+    <center>
+        <fieldset style="height: 300px">
+            <div class="wrapper">
+                <table border="1" style="width: 750px; text-align: center;">
+  <tr>
+    <th>Full Name</th>
+    <th>Mobile No.</th>
+    <th>Address</th>
+    <th>Room No.</th>
+    <th>No. of Day Stay</th>
+    <th>Date</th>
+  </tr>
+                {% for CustomerForm in Customer %}
+                <tr><td>
+                {{ CustomerForm.first_name}}
+                {{ CustomerForm.last_name }} </td>
+
+                <td>
+                {{ CustomerForm.mobile_number }} </td>
+
+                <td>
+                {{ CustomerForm.address }}</td>
+
+                <td>
+                {{ CustomerForm.room_no }}</td>
+
+                <td>
+                {{ CustomerForm.no_of_the_days_to_stay }}</td>
+
+
+                <td>{{ CustomerForm.date }}</td>
+                </tr>
+                
+                {% endfor %}
+
+            </table>
+</fieldset>
+    </center>
+
+</body>
+</html>
+{% endblock %}

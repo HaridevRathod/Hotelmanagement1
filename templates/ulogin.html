@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head><br><br>
+        <title>login</title>
+        {% block content %}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body{
+                background-image: url("{% static 'img/bg.jpg' %}");
+            } 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        </style>
+
+    </head>
+        <body bgcolor="black">
+            <font color="white">
+                <center><h1>{% block title %} Hotel Management System {% endblock %}</h1></center><br>
+        <fieldset>
+            <div class="wrapper" align="center">
+
+            <legend><h2>Login</h2></legend><br>
+            <!-- Alerts -->
+            {% include '_alerts.html' %}
+            <form action="{% url 'ulogin' %}" method="POST">
+                {% csrf_token %}
+
+            <label for="username">Username: <input type="text" name="username" required><br><br><br>
+            <label for="password">Password: <input type="password" name="password" required><br>
+            <br><br><br>
+            <br><br><br>
+            <input type="submit" value="submit"><br>
+            </form>
+            <p class="text-center">don't have an account,<a href="/register">register</a> Create an account</p>
+        
+    </fieldset>
+    
+
+{% endblock %}
+<footer><br><br>
+<div class="copyright"><font color="white">
+                    <center><p>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Hotel Management System | All rights reserved | <a href="" target="_blank"></a>
+                        </p></center></font>
+            
+        </div>
+    </footer>
+
+    </body>
+</html>

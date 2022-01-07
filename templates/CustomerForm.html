@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+<style type="text/css">
+            body{
+                background-image: url("{% static 'img/bg.jpg' %}");
+            }
+</style>
+<body>
+<div class="container"><center>
+    <form action="{% url 'form' %}" method="POST">
+    	<font color="white">
+    		<h1>Customer Form</h1>
+	      <fieldset style="height: 320px">
+	        {% csrf_token %}
+	        {{ form.as_p }}
+	        <br>
+	        <button type="submit" class="btn btn-primary">Submit</button>
+	      </fieldset>
+	  	</font>
+	  </form>
+</div>
+</body>
+{% endblock %}

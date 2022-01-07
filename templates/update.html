@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+
+<style type="text/css">
+    body{
+        background-image: url("{% static 'img/bg.jpg' %}");
+        }
+</style>
+<body>
+<div class="container"><center>
+    <form class="" method="post">
+    	<font color="white">
+    		<h1>Update Records</h1>
+    {% csrf_token %}
+    <fieldset style="height: 320px"> <br>
+        First Name: <input type="text" name="first_name" value="{{ CustomerForm.first_name }}"><br><br>
+
+        Last Name: <input type="text" name="last_name" value="{{ CustomerForm.last_name }}"><br><br>
+        
+        Mobile Number: <input type="number" name="mobile_number" value="{{ CustomerForm.mobile_number }}"><br><br>
+        
+        Address: <input type="text" name="address" value="{{ CustomerForm.address }}"><br><br>
+
+        Room No: <input type="number" name="room_no" value="{{ CustomerForm.room_no }}"><br><br>
+
+        No of the days to stay: <input type="number" name="no_of_the_days_to_stay" value="{{ CustomerForm.no_of_the_days_to_stay }}"><br><br>
+        
+        Date: <input type="date" name="date" value="{{ CustomerForm.date }}"><br><br>
+        
+        
+        <input type="submit" value="Update Record" name=''>
+    </fieldset>
+    </form>
+</div>
+</font>
+
+{% endblock %}

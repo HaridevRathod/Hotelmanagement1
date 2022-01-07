@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>	
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+    <style>
+
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        body{ font: 14px sans-serif;}
+        .wrapper{ width: 360px; padding: 20px; }
+
+        
+        table {
+  			border-collapse: collapse;
+  			width: 100%;
+  			border: 1px solid #ddd;
+			}
+
+   			td{background-color:grey;}
+  			th {background-color: lightgrey;}
+  
+    </style>
+<body>
+    <font color="white">
+    <header>
+    <table>
+        <tr><td style="text-align: left;"><h1>&nbsp;{% block title %} Hotel Management System{% endblock %}</h1></td></tr>
+        <tr>
+            <th align='left'><br>
+        
+        <div>&nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'uhome' %}">Home</a>&nbsp; &nbsp; &nbsp; &nbsp;
+				<a href="{% url 'uform' %}">Book Your Room</a>&nbsp; &nbsp; &nbsp; &nbsp;
+				<a href="{% url 'about' %}">About</a>  &nbsp; &nbsp; &nbsp; &nbsp;
+				<a href=""></a>
+          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
+					<a href="">{{user.username}}</a>&nbsp; &nbsp; &nbsp; &nbsp;
+   						 
+					<a href="{% url 'ulogout' %}">Logout</a></div><br>
+				</th>
+			</tr>
+		</table>    
+	</font>
+</header>
+{% block content %}
+
+
+{% endblock %}
+<footer>
+<div class="copyright"><font color="white">
+					<center><p>
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> Hotel Management System | All rights reserved | <a href="" target="_blank"></a>
+						</p></center></font>
+			
+		</div>
+	</footer>
+

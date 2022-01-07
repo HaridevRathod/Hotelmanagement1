@@ -1,0 +1,73 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style type="text/css">
+      /*table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }*/
+
+        body{
+        background-image: url("{% static 'img/bg.jpg' %}");
+        }
+
+  </style>
+<body bgcolor="black">
+  <font color="white">
+                <center><h1>Update or Delete Details</h1></center></font></center>
+    <center>
+        <fieldset style="height: 300px">
+            <div class="wrapper">
+                <table border="1" style="width: 750px; text-align: center;">
+  <tr>
+    <th>Full Name</th>
+    <th>Mobile No.</th>
+    <th>Address</th>
+    <th>Room No.</th>
+    <th>No. of Day Stay</th>
+    <th>Date</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+                {% for CustomerForm in Customer %}<tr>
+                <td>
+                {{ CustomerForm.first_name}}
+                {{ CustomerForm.last_name }} </td>
+
+                <td>
+                {{ CustomerForm.mobile_number }} </td>
+
+                <td>
+                {{ CustomerForm.address }}</td>
+
+                <td>
+                {{ CustomerForm.room_no }}</td>
+
+                <td>
+                {{ CustomerForm.no_of_the_days_to_stay }}</td>
+                
+                <td>
+                {{ CustomerForm.date }}</td>
+                
+                <div class="product_box_controls">
+                    <td><a href="/update/{{CustomerForm.id}}" class="btn btn-success">Update</a></td>
+                    <td><a href="/delete/{{CustomerForm.id}}" class="btn btn-success m-2"> Delete </a></td>
+       <!-- <td><input type="button" value="Edit"></td>
+        <td><input type="button" value="Delete"></td> -->
+    </div></td></tr>
+                
+                {% endfor %}
+
+            </table>
+
+    </center>
+
+</body>
+</html>
+{% endblock %}

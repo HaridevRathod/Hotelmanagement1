@@ -1,0 +1,32 @@
+{% extends "ubase.html" %} 
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about</title>
+</head>
+<style type="text/css">
+    body{
+        background-image: url("{% static 'img/bg.jpg' %}");
+        }
+       
+</style>
+<body><br><br>
+	<div class="container"><center>
+	<font color="white">
+		<h1>About us</h1>
+
+	<fieldset style="height: 276px">
+		<h3>
+		&#8594; This is Our Hotel Management System website. &#8592;
+		<br><br>
+		&#8594; customer can book the room &#8592;
+        <br><br><br>
+        &#8594; we provide Best AC and Non AC Room. &#8592; </h3>
+    </center>
+	</fieldset>
+</font>
+</body>
+</html>
+{% endblock %}
